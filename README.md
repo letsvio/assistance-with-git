@@ -43,7 +43,7 @@ git branch -d <ветка>    # Удалить ветку (локально)
 git remote add origin <url>  # Привязать удалённый репозиторий
 git remote -v                # Проверить привязку
 
-git push -u origin main      # Первый пуш ветки main
+git push -u origin main (master)      # Первый пуш ветки main также она может быть веткой master
 git push                     # Отправить изменения
 git pull                     # Получить изменения
 git fetch                    # Скачать изменения без слияния
