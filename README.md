@@ -175,7 +175,6 @@ graph LR;
     modified -- "git add" --> staged;
     staged -- "git reset HEAD <файл>" --> modified;
     modified -- "git restore <файл>" --> tracked;
-    untracked -- "файл удалён" --> deleted["Deleted (удалённый)"];
     modified -- "git checkout -- <файл>" --> tracked;
 ```
 
