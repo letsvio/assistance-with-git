@@ -170,13 +170,13 @@ git reflog                     # История всех действий
 ```mermaid
 graph LR;
     untracked["Untracked (неотслеживаемый)"] -- "git add" --> staged["Staged (в индексе)"];
-    staged -- "git commit" --> tracked["Committed (в репозитории)"];
-    committed -- "изменение в файле" --> modified["Modified (изменённый)"];
+    staged -- "git commit" --> tracked["tracked (в репозитории)"];
+    tracked -- "изменение в файле" --> modified["Modified (изменённый)"];
     modified -- "git add" --> staged;
     staged -- "git reset HEAD <файл>" --> modified;
-    modified -- "git restore <файл>" --> committed;
+    modified -- "git restore <файл>" --> tracked;
     untracked -- "файл удалён" --> deleted["Deleted (удалённый)"];
-    modified -- "git checkout -- <файл>" --> committed;
+    modified -- "git checkout -- <файл>" --> tracked;
 ```
 
 
